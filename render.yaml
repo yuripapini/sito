@@ -1,0 +1,10 @@
+version: 1
+services:
+  - type: web
+    name: mio-sito
+    env: static
+    branch: master
+    buildCommand: echo "No build needed"
+    autoPublish: true
+    routes:
+      - path:/*
