@@ -3,49 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina Mobile</title>
+    <title>Buongiorno bellissima</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-align: center;
-            padding: 20px;
+        * {
             margin: 0;
-            background-color: #f8f9fa;
-            color: #333;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #ffeef2 0%, #ffe0ec 50%, #fff5e6 100%);
+            color: #4a3540;
         }
         .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 30px;
+            width: 100%;
+            max-width: 520px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 45px 35px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(231, 76, 60, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            animation: fadeIn 0.8s ease-out;
         }
         h1 {
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-            color: #e74c3c;
+            font-family: 'Dancing Script', 'Poppins', cursive;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #e74c3c, #e84393);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         .heart {
-            font-size: 1.8rem;
-            vertical-align: middle;
+            display: inline-block;
+            font-size: 2.2rem;
+            color: #e74c3c;
+            animation: pulse 1.4s ease-in-out infinite;
         }
-        img {
+        .decoration {
+            width: 70px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #e84393, transparent);
+            margin: 0 auto 28px;
+            border-radius: 3px;
+        }
+        .image-wrapper {
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        .image-wrapper img {
+            display: block;
             max-width: 100%;
             height: auto;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            margin: 25px 0;
+            transition: transform 0.5s ease;
         }
-        .footer {
-            font-size: 0.9rem;
-            color: #777;
-            margin-top: 30px;
+        .image-wrapper:hover img {
+            transform: scale(1.04);
+        }
+        .caption {
+            margin-top: 20px;
+            font-size: 1.05rem;
+            font-style: italic;
+            color: #8a6d7d;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 35px 25px;
+            }
+            h1 {
+                font-size: 2.4rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Buongiorno caccolosa <span class="heart">♥</span></h1>
-        <img src="Gemini_Generated_Image_jjmihojjmihojjmi.jpg" alt="Immagine">
-        <p class="footer">Pagina ottimizzata per dispositivi mobili</p>
+        <h1>Buongiorno bellissima</h1>
+        <div class="heart">♥</div>
+        <div class="decoration"></div>
+        <div class="image-wrapper">
+            <img src="Gemini_Generated_Image_jjmihojjmihojjmi.jpg" alt="Immagine">
+        </div>
+        <p class="caption">Giuro, la foto è così</p>
     </div>
 </body>
 </html>
